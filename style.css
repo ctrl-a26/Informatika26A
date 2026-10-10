@@ -776,6 +776,7 @@ footer .footer-instagram i {
   }
 
   body::before {
+    background-position: center 40%;
     background-size: cover;
     opacity: 0.42;
   }
@@ -854,6 +855,7 @@ footer .footer-instagram i {
   }
 
   body::before {
+    background-position: center 35%;
     background-size: cover;
     opacity: 0.36;
   }
