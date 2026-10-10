@@ -782,11 +782,11 @@ footer .footer-instagram i {
   }
 
   .navbar {
-    display: none;
+    display: flex;
   }
 
   #menu {
-    display: inline-block;
+    display: inline-flex;
   }
 
   .navbar .navbar-nav {
