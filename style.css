@@ -860,6 +860,11 @@ footer .footer-instagram i {
     opacity: 0.36;
   }
 
+  .sidebar, .nav-menu {
+    width: 70vw;
+    max-widht: 280px
+  }
+
   .contact-list {
     width: calc(100% - 2rem);
     margin: 1.5rem auto;
