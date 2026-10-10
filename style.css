@@ -37,6 +37,12 @@ body::before {
   pointer-events: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 /* navbar */
 .navbar {
   position: sticky;
@@ -186,7 +192,6 @@ body::before {
 
 /* about */
 .about {
-  flex: 1;
   width: min(90%, 70rem);
   margin: 3rem auto;
   padding: 2rem;
@@ -213,6 +218,15 @@ body::before {
 /* about end */
 
 /* members */
+.member-list {
+  width: min(92%, 75rem);
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid rgba(192, 132, 252, 0.65);
+  border-radius: 1rem;
+  background-color: rgba(48, 20, 80, 0.75);
+  box-shadow: 0 0.75rem 2rem rgba(15, 6, 25, 0.25);
+}
 .member-list {
   flex: 1;
   width: min(92%, 75rem);
@@ -412,7 +426,6 @@ body::before {
 
 /* contact */
 .contact-list {
-  flex: 1;
   width: min(92%, 75rem);
   margin: 3rem auto;
   padding: 2rem;
@@ -496,7 +509,6 @@ body::before {
 
 /* class structure */
 .structure {
-  flex: 1;
   width: min(96%, 100rem);
   margin: 3rem auto;
   padding: 2rem;
