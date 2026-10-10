@@ -777,8 +777,12 @@ footer .footer-instagram i {
 
   body::before {
     background-position: center 40%;
-    background-size: 758px;
+    background-size: cover;
     opacity: 0.42;
+  }
+
+  .navbar {
+    display: none;
   }
 
   #menu {
@@ -856,7 +860,7 @@ footer .footer-instagram i {
 
   body::before {
     background-position: center 35%;
-    background-size: 450px;
+    background-size: cover;
     opacity: 0.36;
   }
 
