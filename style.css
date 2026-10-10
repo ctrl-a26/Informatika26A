@@ -777,7 +777,7 @@ footer .footer-instagram i {
 
   body::before {
     background-position: center 40%;
-    background-size: cover;
+    background-size: 758px;
     opacity: 0.42;
   }
 
@@ -856,13 +856,8 @@ footer .footer-instagram i {
 
   body::before {
     background-position: center 35%;
-    background-size: cover;
+    background-size: 450px;
     opacity: 0.36;
-  }
-
-  .sidebar, .nav-menu {
-    width: 70vw;
-    max-widht: 280px
   }
 
   .contact-list {
