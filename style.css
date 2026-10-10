@@ -13,7 +13,6 @@
 }
 
 html {
-  font-size: clamp(14px, 0.9vw + 2px, 16px);
   scroll-behavior: smooth;
 }
 
@@ -554,7 +553,6 @@ body::before {
 .org-name {
   font-size: 1.1rem;
   font-weight: 500;
-  overflow-wrap: anywhere;
 }
 
 .org-connector {
@@ -751,31 +749,30 @@ footer .footer-instagram i {
 
 /* media */
 
+/* dekstop */
+@media (max-width: 1920px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 /* tablet */
 @media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     min-height: 100vh;
     min-height: 100svh;
     overflow-x: clip;
-  }
-
-  .navbar {
-    gap: 0.75rem;
-    padding: 0.75rem clamp(0.875rem, 4vw, 1.5rem);
-  }
-
-  .navbar .navbar-logo {
-    font-size: clamp(1.1rem, 4vw, 1.5rem);
-  }
-
-  .navbar .navbar-extra a {
-    margin: 0;
-  }
-
-  #menu {
-    min-width: 2.75rem;
-    min-height: 2.75rem;
-    font-size: 1.8rem;
   }
 
   body::before {
@@ -792,9 +789,8 @@ footer .footer-instagram i {
     position: absolute;
     top: 100%;
     right: -100%;
-    width: min(22rem, calc(100vw - 1rem));
-    max-height: calc(100svh - 4.5rem);
-    overflow-y: auto;
+    width: min(30rem, 90vw);
+    min-height: calc(100vh - 100%);
     padding: 1rem 1.5rem;
     background-color: rgba(48, 20, 80, 0.98);
     box-shadow: 0 1rem 1.5rem rgba(15, 6, 25, 0.3);
@@ -819,37 +815,6 @@ footer .footer-instagram i {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
-  }
-
-  .hero {
-    min-height: 100svh;
-  }
-
-  .hero .content {
-    width: 100%;
-    padding: clamp(2rem, 7vw, 4rem) clamp(1.25rem, 6vw, 3rem);
-  }
-
-  .hero .content h1 {
-    font-size: clamp(2.5rem, 7vw, 4rem);
-    line-height: 1.15;
-  }
-
-  .hero .content p {
-    max-width: 60ch;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.6;
-  }
-
-  .hero .content .cta {
-    padding: 0.9rem 1.25rem;
-    font-size: 1rem;
-  }
-
-  .member-list h2,
-  .contact-list h2,
-  .structure h2 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
   }
 
   .contact-list {
@@ -879,30 +844,18 @@ footer .footer-instagram i {
 
 /* mobile */
 @media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
   body {
-    min-height: 50vh;
+    min-height: 100vh;
     min-height: 100svh;
   }
 
   body::before {
     background-size: cover;
     opacity: 0.36;
-  }
-
-  .hero {
-    min-height: calc(100svh - 4rem);
-  }
-
-  .hero .content h1 {
-    font-size: clamp(2.25rem, 9vw, 3rem);
-  }
-
-  .hero .content p {
-    font-size: 1rem;
-  }
-
-  .hero .content .cta {
-    min-height: 2.75rem;
   }
 
   .contact-list {
@@ -931,16 +884,8 @@ footer .footer-instagram i {
   }
 
   .member-pair-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
-  }
-
-  .member-card {
-    padding: 1rem 0.75rem;
-  }
-
-  .member-card h3 {
-    font-size: 1rem;
   }
 
   .contact-card {
@@ -954,17 +899,5 @@ footer .footer-instagram i {
   .contact-action {
     min-height: 4rem;
     padding: 0.8rem 1.25rem;
-  }
-
-  .org-team,
-  .org-divisions {
-    grid-template-columns: 1fr;
-    row-gap: 1.25rem;
-    width: min(100%, 26rem);
-  }
-
-  .org-team::before,
-  .org-divisions::before {
-    display: none;
   }
 }
