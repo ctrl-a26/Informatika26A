@@ -16,6 +16,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 1. Pastikan html dan body mengunci tinggi 100% */
+html, body {
+  height: 100%;
+}
+
+/* 2. Pastikan body menggunakan flexbox dengan benar */
 body {
   display: flex;
   flex-direction: column;
@@ -27,6 +33,21 @@ body {
   isolation: isolate;
 }
 
+/* 3. Pastikan tag main meregang mengisi sisa ruang */
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* 4. Khusus halaman about, buat section-nya ikut menyesuaikan */
+#about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Membuat konten teks tentang kami berada di tengah secara vertikal */
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -36,13 +57,6 @@ body::before {
   z-index: -1;
   pointer-events: none;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 /* navbar */
 .navbar {
   position: sticky;
