@@ -201,6 +201,10 @@ main {
   box-shadow: 0 0.75rem 2rem rgba(15, 6, 25, 0.25);
 }
 
+.about-main {
+  justify-content: center;
+}
+
 .about h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -214,12 +218,6 @@ main {
   text-align: justify;
   line-height: 1.8;
   font-size: 1.2rem;
-}
-
-/* Membuat halaman about dan contact yang kontennya pendek tetap rapi di tengah */
-main:has(#about),
-main:has(#contact) {
-  justify-content: center;
 }
 /* about end */
 
