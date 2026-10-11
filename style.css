@@ -215,6 +215,12 @@ main {
   line-height: 1.8;
   font-size: 1.2rem;
 }
+
+/* Membuat halaman about dan contact yang kontennya pendek tetap rapi di tengah */
+main:has(#about),
+main:has(#contact) {
+  justify-content: center;
+}
 /* about end */
 
 /* members */
