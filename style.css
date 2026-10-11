@@ -170,7 +170,7 @@ main {
   background-color: #fff;
   color: var(--primary);
   margin-top: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   box-shadow: 0 0 12px rgba(192, 132, 252, 0.35);
