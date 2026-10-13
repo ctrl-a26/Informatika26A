@@ -37,12 +37,6 @@ body::before {
   pointer-events: none;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 /* navbar */
 .navbar {
   position: sticky;
@@ -133,7 +127,7 @@ main {
 /* hero */
 .hero {
   display: flex;
-  align-items: center
+  align-items: center;
   min-height: 100vh;
   position: relative;
 }
@@ -192,6 +186,7 @@ main {
 
 /* about */
 .about {
+  flex: 1;
   width: min(90%, 70rem);
   margin: 3rem auto;
   padding: 2rem;
@@ -218,16 +213,6 @@ main {
 /* about end */
 
 /* members */
-.member-list {
-  width: min(92%, 75rem);
-  margin: 3rem auto;
-  padding: 2rem;
-  border: 1px solid rgba(192, 132, 252, 0.65);
-  border-radius: 1rem;
-  background-color: rgba(48, 20, 80, 0.75);
-  box-shadow: 0 0.75rem 2rem rgba(15, 6, 25, 0.25);
-}
-
 .member-list {
   flex: 1;
   width: min(92%, 75rem);
@@ -387,15 +372,6 @@ main {
   }
 }
 
-.member-centered-row {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  width: min(100%, 20rem);
-  justify-self: center;
-}
-
 .member-pair-row {
   display: contents;
 }
@@ -427,6 +403,7 @@ main {
 
 /* contact */
 .contact-list {
+  flex: 1;
   width: min(92%, 75rem);
   margin: 3rem auto;
   padding: 2rem;
@@ -510,6 +487,7 @@ main {
 
 /* class structure */
 .structure {
+  flex: 1;
   width: min(96%, 100rem);
   margin: 3rem auto;
   padding: 2rem;
@@ -666,15 +644,15 @@ main {
 }
 
 .org-pj .org-role {
-  font-size: 1.25rm;
+  font-size: 1.25rem;
   overflow-wrap: anywhere;
 }
 
 .org-members {
   margin-top: 1.25rem;
 }
-
 /* class structure end */
+
 @media (max-width: 700px) {
   .structure {
     padding: 1.25rem;
@@ -761,6 +739,7 @@ footer .footer-instagram i {
 }
 
 /* media */
+
 /* dekstop */
 @media (max-width: 1920px) {
   html {
@@ -791,6 +770,10 @@ footer .footer-instagram i {
     background-position: center 40%;
     background-size: cover;
     opacity: 0.42;
+  }
+
+  .navbar {
+    display: flex;
   }
 
   #menu {
@@ -828,6 +811,17 @@ footer .footer-instagram i {
 
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .member-centered-row {
+    grid-template-columns: 1fr;
+    width: min(100%, 24rem);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: min(100%, 20rem);
+    justify-self: center;
   }
 
   .contact-list {
@@ -895,6 +889,12 @@ footer .footer-instagram i {
   .member-centered-row {
     grid-template-columns: 1fr;
     width: min(100%, 24rem);
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: min(100%, 20rem);
+    justify-self: center;
   }
 
   .member-pair-row {
