@@ -411,7 +411,11 @@ body::before {
   border: 1px solid rgba(216, 180, 254, 0.32);
   border-radius: 1.5rem;
   background:
-    radial-gradient(ellipse at 50% 0, rgba(147, 51, 234, 0.24), transparent 55%),
+    radial-gradient(
+      ellipse at 50% 0,
+      rgba(147, 51, 234, 0.24),
+      transparent 55%
+    ),
     rgba(36, 17, 57, 0.88);
   box-shadow: 0 1.5rem 4rem rgba(15, 6, 25, 0.4);
 }
