@@ -39,6 +39,13 @@ body::before {
   pointer-events: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
 .contact, .about, .member-list, .structure {
   width: min(92%, 68rem);
   margin: 2rem auto;
