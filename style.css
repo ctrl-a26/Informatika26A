@@ -20,11 +20,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100svh;
   font-family: "poppins", sans-serif;
   color: #fff;
   background-color: var(--bg);
   position: relative;
   isolation: isolate;
+  margin: 0;
 }
 
 body::before {
@@ -798,6 +800,7 @@ footer {
   background-color: rgba(76, 29, 149, 0.9);
   padding: 1rem 0;
   margin-top: auto;
+  width: 100%;
 }
 
 footer .credit {
