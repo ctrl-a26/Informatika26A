@@ -36,7 +36,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("bg-2.jpeg") center / cover no-repeat;
+  background: url("bg-1.jpeg") center / cover no-repeat;
   opacity: 0.3;
   z-index: -1;
   pointer-events: none;
@@ -895,6 +895,28 @@ footer .footer-instagram i {
     min-height: 100svh;
     min-height: 100dvh;
     overflow-x: clip;
+  }
+
+  body.about-page,
+  body.contact-page {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+
+  body.about-page main,
+  body.contact-page main {
+    min-height: 0;
+  }
+
+  .about-page .about {
+    margin-block: 1rem;
+  }
+
+  .contact-page .contact {
+    margin-block: 0.5rem;
   }
 
   body::before {
