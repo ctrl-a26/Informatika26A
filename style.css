@@ -17,8 +17,8 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Baris 1: Navbar, Baris 2: Konten Utama (fleksibel), Baris 3: Footer */
   min-height: 100vh;
   min-height: 100svh;
   font-family: "poppins", sans-serif;
