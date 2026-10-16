@@ -21,6 +21,7 @@ body {
   grid-template-rows: auto 1fr auto; /* Baris 1: Navbar, Baris 2: Konten Utama (fleksibel), Baris 3: Footer */
   min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
   font-family: "poppins", sans-serif;
   color: #fff;
   background-color: var(--bg);
@@ -864,6 +865,7 @@ footer .footer-instagram i {
     display: grid;
     min-height: 100vh;
     min-height: 100svh;
+    min-height: 100dvh;
     overflow-x: clip;
   }
 
@@ -957,6 +959,7 @@ footer .footer-instagram i {
     display: grid;
     min-height: 100vh;
     min-height: 100svh;
+    min-height: 100dvh;
   }
 
   body::before {
