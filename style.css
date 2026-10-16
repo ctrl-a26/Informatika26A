@@ -39,13 +39,6 @@ body::before {
   pointer-events: none;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
 .contact, .about, .member-list, .structure {
   flex: 1; 
   display: flex;
