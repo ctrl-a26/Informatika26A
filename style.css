@@ -39,12 +39,15 @@ body::before {
   pointer-events: none;
 }
 
-/* Contoh untuk section halaman kontak atau about */
 .contact, .about, .member-list, .structure {
-  flex: 1; /* Membuat section ini mengambil sisa ruang kosong layar */
+  width: min(92%, 68rem);
+  margin: 2rem auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  /* Tambahkan baris di bawah ini agar kotaknya ikut merentang penuh ke bawah */
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Opsional: agar kontennya berada di tengah secara vertikal jika diinginkan */
+  justify-content: center;
 }
 
 /* navbar */
