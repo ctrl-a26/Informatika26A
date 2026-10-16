@@ -47,14 +47,10 @@ main {
 }
 
 .contact, .about, .member-list, .structure {
-  width: min(92%, 68rem);
-  margin: 2rem auto;
-  padding: clamp(2rem, 5vw, 4rem);
-  /* Tambahkan baris di bawah ini agar kotaknya ikut merentang penuh ke bawah */
-  min-height: 100%;
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
 }
 
 /* navbar */
