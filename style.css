@@ -545,10 +545,10 @@ body::before {
   gap: 0.6rem;
   min-height: 3rem;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(216, 180, 254, 0.45);
   border-radius: 0.7rem;
-  background: #25d366;
-  color: #103b24;
+  background: var(--primary);
+  color: var(--bg);
   font-weight: 600;
   transition:
     background-color 180ms ease,
@@ -561,7 +561,7 @@ body::before {
 
 .contact-action:hover {
   transform: translateY(-2px);
-  background: #6ee7a0;
+  background: #d8b4fe;
 }
 
 .contact-action:focus-visible {

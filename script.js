@@ -65,7 +65,7 @@ if (memberSearch && memberCards.length) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".hero .content, .about, .member-list, .structure, .contact-list, footer, .member-card, .contact-card",
+  ".hero .content, .about, .member-list, .structure, .contact, .member-card, .contact-card",
 );
 
 if (
