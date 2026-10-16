@@ -42,6 +42,11 @@ body::before {
   pointer-events: none;
 }
 
+.about-page::before,
+.contact-page::before {
+  position: absolute;
+}
+
 /* Contoh untuk section halaman kontak atau about */
 .contact,
 .about,
@@ -173,7 +178,8 @@ body::before {
   margin-top: 1rem;
 }
 
-.hero .content .cta {
+.hero .content .cta,
+.page-cta {
   display: inline-block;
   background-color: var(--primary);
   color: var(--bg);
@@ -184,17 +190,25 @@ body::before {
   box-shadow: 0 3px 10px rgba(15, 6, 25, 0.2);
 }
 
-.hero .content .cta:hover {
+.hero .content .cta:hover,
+.page-cta:hover {
   background-color: #d8b4fe;
   color: var(--bg);
   box-shadow: 0 4px 12px rgba(15, 6, 25, 0.25);
 }
 
-.content .cta::after {
+.content .cta::after,
+.page-cta::after {
   content: "→";
   display: inline-block;
   margin-left: 0.5rem;
   transition: 0.3s;
+}
+
+.page-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 /* hero end */
 
@@ -332,6 +346,33 @@ body::before {
 .scroll-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes page-scroll-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-scroll-out {
+  to {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+}
+
+body.page-transition-in {
+  animation: page-scroll-in 420ms ease-out both;
+}
+
+body.page-transition-out {
+  animation: page-scroll-out 320ms ease-in both;
+  pointer-events: none;
 }
 
 .back-to-top {

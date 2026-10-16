@@ -1,3 +1,15 @@
+const pageTransitionKey = "page-cta-transition";
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
+if (sessionStorage.getItem(pageTransitionKey) === "pending") {
+  sessionStorage.removeItem(pageTransitionKey);
+  if (!prefersReducedMotion) {
+    document.body.classList.add("page-transition-in");
+  }
+}
+
 const navbar = document.querySelector(".navbar");
 const navbarNav = document.querySelector(".navbar-nav");
 const menuButton = document.querySelector("#menu");
@@ -39,6 +51,40 @@ if (navbar && navbarNav && menuButton) {
     }
   });
 }
+
+document
+  .querySelectorAll(".page-cta, .hero .content .cta, .navbar-nav a")
+  .forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (
+        prefersReducedMotion ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        (link.target && link.target !== "_self") ||
+        link.hasAttribute("download")
+      ) {
+        return;
+      }
+
+      const destination = new URL(link.href, window.location.href);
+      if (
+        destination.origin !== window.location.origin ||
+        destination.pathname === window.location.pathname
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      sessionStorage.setItem(pageTransitionKey, "pending");
+      document.body.classList.add("page-transition-out");
+      window.setTimeout(() => {
+        window.location.assign(destination.href);
+      }, 320);
+    });
+  });
 
 const memberSearch = document.querySelector("#member-search");
 const memberCards = [...document.querySelectorAll(".member-grid .member-card")];
