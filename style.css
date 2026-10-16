@@ -36,7 +36,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("bg-1.jpeg") center / cover no-repeat;
+  background: url("bg-2.jpeg") center / cover no-repeat;
   opacity: 0.3;
   z-index: -1;
   pointer-events: none;
